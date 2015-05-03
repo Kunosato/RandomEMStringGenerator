@@ -1,10 +1,10 @@
-if ARGV[0] == nil
-  n = 32
+﻿if ARGV[0] == nil
+	n = 32
 else
-  n = ARGV[0].to_i
+	n = ARGV[0].to_i
 end
-s = ''
+a = ['ぁ'..'ん', 'ァ'..'ヴ', 'Ａ'..'Ｚ', 'ａ'..'ｚ', '０'..'９'].map{|r| r.to_a}.flatten
 n.times {
-  s << ('ぁ'..'ん').to_a.concat(('ァ'..'ヴ').to_a).concat(('Ａ'..'Ｚ').to_a).concat(('ａ'..'ｚ').to_a).concat(('０'..'９').to_a).sample
+	print a.sample
 }
-puts s
+puts
